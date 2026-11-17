@@ -9,20 +9,20 @@ Automatically tracks the latest release and updates binaries daily via CI.
 ### Run directly
 
 ```bash
-nix run github:yuxqiu/omp-nix
+nix run github:quatrejuin/omp-nix
 ```
 
 ### Install into a profile
 
 ```bash
-nix profile install github:yuxqiu/omp-nix
+nix profile install github:quatrejuin/omp-nix
 ```
 
 ### Add to your own flake
 
 ```nix
 {
-  inputs.omp-nix.url = "github:yuxqiu/omp-nix";
+  inputs.omp-nix.url = "github:quatrejuin/omp-nix";
 
   outputs = { nixpkgs, omp-nix, ... }@inputs: {
     # Use inputs.omp-nix.packages.${system}.default
@@ -34,7 +34,7 @@ nix profile install github:yuxqiu/omp-nix
 
 ```nix
 {
-  inputs.omp-nix.url = "github:yuxqiu/omp-nix";
+  inputs.omp-nix.url = "github:quatrejuin/omp-nix";
 
   outputs = { nixpkgs, omp-nix, ... }@inputs: let
     pkgs = import nixpkgs {
